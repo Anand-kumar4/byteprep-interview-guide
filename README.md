@@ -11,10 +11,10 @@ Welcome to BytePrep, a curated and comprehensive guide for preparing for Data En
 Visit the guide here: [BytePrep Interview Guide](https://anand-kumar4.github.io/byteprep-interview-guide/)
 
 <p align="center">
-  <img src="https://anand-kumar4.github.io/byteprep-interview-guide/assets/homepage-preview.png" alt="Homepage Preview" width="600"/>
+  <img src="https://raw.githubusercontent.com/Anand-kumar4/byteprep-interview-guide/main/docs/assets/homepage-preview.png" alt="Homepage Preview" width="600"/>
 </p>
 
-*Figure: BytePrep homepage preview*
+<p align="center"><em>Figure: BytePrep homepage preview</em></p>
 
 ⸻
 
