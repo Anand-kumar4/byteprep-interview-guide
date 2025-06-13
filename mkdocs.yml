@@ -1,0 +1,42 @@
+site_name: BytePrep – Data Engineering Interview Guide
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: blue
+    accent: light blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.annotate
+    - content.tabs.link
+    - content.code.copy
+    - navigation.top
+
+nav:
+  - Home: index.md
+  - SQL: sql/index.md
+  - Python: python/index.md
+  - PySpark: pyspark/index.md
+  - AWS: aws/index.md
+  - Data Modeling: data-modeling/index.md
+  - System Design: system-design/index.md
+  - Projects: projects/index.md
+  - About: about.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - footnotes
+  - tables
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.emoji
+  - pymdownx.inlinehilite
+  - pymdownx.highlight
+
+plugins:
+  - search
