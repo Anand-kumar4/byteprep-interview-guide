@@ -11,7 +11,7 @@ Welcome to BytePrep, a curated and comprehensive guide for preparing for Data En
 Visit the guide here: [BytePrep Interview Guide](https://anand-kumar4.github.io/byteprep-interview-guide/)
 
 <p align="center">
-  <img src="docs/assets/homepage-preview.png" alt="Homepage Preview" width="600"/>
+  <img src="https://anand-kumar4.github.io/byteprep-interview-guide/assets/homepage-preview.png" alt="Homepage Preview" width="600"/>
 </p>
 <p align="center"><i>Figure: BytePrep homepage preview</i></p>
 
