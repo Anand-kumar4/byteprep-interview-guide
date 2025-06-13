@@ -1,14 +1,23 @@
-BytePrep – Data Engineering Interview Guide 🚀
+![GitHub repo size](https://img.shields.io/github/repo-size/Anand-kumar4/byteprep-interview-guide)
+![GitHub stars](https://img.shields.io/github/stars/Anand-kumar4/byteprep-interview-guide?style=social)
+![MIT License](https://img.shields.io/github/license/Anand-kumar4/byteprep-interview-guide)
+
+# BytePrep – Data Engineering Interview Guide 🚀
 
 Welcome to BytePrep, a curated and comprehensive guide for preparing for Data Engineering interviews. This open-source project covers practical, scenario-based, and coding-focused content across all major areas relevant to modern data engineers.
 
 🌐 Live Site
 
-Visit the guide here: byteprep-interview-guide
+Visit the guide here: [BytePrep Interview Guide](https://anand-kumar4.github.io/byteprep-interview-guide/)
+
+<p align="center">
+  <img src="docs/assets/homepage-preview.png" alt="Homepage Preview" width="600"/>
+</p>
+<p align="center"><i>Figure: BytePrep homepage preview</i></p>
 
 ⸻
 
-📚 What’s Inside?
+## 📚 What’s Inside?
 
 The guide is structured into the following categories:
 	•	SQL – Query design, performance tuning, and joins
@@ -24,14 +33,14 @@ Each section is filled with real questions from interview prep, solved with clar
 
 ⸻
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 	•	MkDocs – Static site generator
 	•	Material for MkDocs – Theme and UI
 	•	Markdown-based content (easy to extend and contribute)
 
 ⸻
 
-📦 Local Setup (Optional)
+## 📦 Local Setup (Optional)
 
 # Clone the repo
 https://github.com/Anand-kumar4/byteprep-interview-guide.git
@@ -50,7 +59,7 @@ mkdocs serve
 
 ⸻
 
-✨ Contributions
+## ✨ Contributions
 
 This is a personal project, but open to community suggestions, ideas, and contributions.
 To propose:
@@ -60,12 +69,12 @@ To propose:
 
 ⸻
 
-📣 Author
+## 📣 Author
 
 Built and maintained by Anand Kumar Singh
 
 ⸻
 
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License – feel free to use, share, and contribute!
