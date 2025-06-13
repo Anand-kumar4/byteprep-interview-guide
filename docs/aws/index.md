@@ -1,4 +1,9 @@
 
+---
+title: AWS Interview Questions
+description: Explore real-world AWS scenario-based questions covering Glue, S3, Lambda, and best practices for data engineering interviews.
+---
+
 
 
 ## AWS Scenario-Based Questions

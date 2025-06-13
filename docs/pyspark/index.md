@@ -1,3 +1,9 @@
+---
+title: PySpark Interview Questions
+description: Medium complexity PySpark coding interview questions with solutions for data engineering roles.
+keywords: PySpark, Data Engineering, Coding Problems, Interview Preparation, Big Data, Spark SQL, Window Functions
+---
+
 # PySpark Coding Questions
 
 Below are some medium-complexity PySpark problems commonly asked in data engineering interviews.

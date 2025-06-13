@@ -1,3 +1,8 @@
+---
+title: About BytePrep
+description: Learn more about the BytePrep interview guide, its purpose, and how it helps data engineers prepare for interviews.
+---
+
 ## About BytePrep
 
 **BytePrep** is a curated, no-fluff resource built by **Anand Kumar Singh** to help aspiring and experienced data engineers prepare for technical interviews with confidence.

@@ -1,4 +1,10 @@
 
+---
+title: Python Interview Questions
+description: A curated list of Python coding questions including medium-level problems and string manipulation challenges, commonly asked in data engineering and software interviews.
+keywords: Python, interview questions, coding problems, string algorithms, LeetCode, Python strings
+---
+
 
 # Python Interview Questions
 

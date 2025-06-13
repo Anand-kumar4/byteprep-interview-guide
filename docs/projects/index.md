@@ -1,3 +1,9 @@
+---
+title: Data Engineering Projects
+description: A curated collection of hands-on data engineering projects including architecture, tech stack, and outcomes.
+keywords: data engineering projects, AWS, Snowflake, IoT, analytics, ETL, real-time data, Power BI, Glue, Kinesis, dbt, DynamoDB
+---
+
 ## Projects Overview
 
 ### 1. Retail Analytics Platform  

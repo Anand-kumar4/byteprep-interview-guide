@@ -1,3 +1,9 @@
+---
+title: SQL Interview Questions
+description: A collection of commonly asked SQL interview questions with explanations and examples.
+keywords: SQL, interview questions, joins, subquery, group by, having, duplicates
+---
+
 # SQL Interview Questions
 
 ## Q1. What is a LEFT ANTI JOIN? How is it different from LEFT JOIN?

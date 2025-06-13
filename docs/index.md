@@ -1,3 +1,8 @@
+---
+title: BytePrep – Data Engineering Interview Hub
+description: Curated resources and questions to prepare for Data Engineering interviews, including SQL, Python, PySpark, AWS, system design, and more.
+---
+
 # Welcome to BytePrep – Your Data Engineering Interview Hub 🚀
 
 This is a curated, no-fluff guide for preparing for Data Engineering interviews — covering topics like:

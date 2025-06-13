@@ -1,3 +1,9 @@
+---
+title: Data Modeling
+description: Common Data Modeling & Warehousing interview questions with real-world answers and implementation tips.
+keywords: Data Modeling, Star Schema, Snowflake Schema, SCD, ETL, Warehousing
+---
+
 # Data Modeling & Warehousing
 
 ## 1. Star vs Snowflake Schema
