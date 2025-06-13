@@ -11,32 +11,35 @@ Welcome to BytePrep, a curated and comprehensive guide for preparing for Data En
 Visit the guide here: [BytePrep Interview Guide](https://anand-kumar4.github.io/byteprep-interview-guide/)
 
 <p align="center">
-  <img src="https://anand-kumar4.github.io/byteprep-interview-guide/assets/homepage-preview.png" alt="Homepage Preview" width="600"/>
+  ![Homepage Preview](https://anand-kumar4.github.io/byteprep-interview-guide/assets/homepage-preview.png)
 </p>
-<p align="center"><i>Figure: BytePrep homepage preview</i></p>
+
+*Figure: BytePrep homepage preview*
 
 ⸻
 
 ## 📚 What’s Inside?
 
 The guide is structured into the following categories:
-	•	SQL – Query design, performance tuning, and joins
-	•	Python – Core logic, string problems, and coding patterns
-	•	PySpark – Real-world data transformation scenarios
-	•	AWS – Glue, Lambda, S3, and more in context of DE
-	•	System Design – Design for scale, ingestion, and batch/streaming
-	•	Data Modeling – Warehousing patterns, dimension modeling
-	•	Projects – End-to-end projects to showcase real experience
-	•	Behavioral – Role-fit, scenario-based and culture questions
+
+- SQL – Query design, performance tuning, and joins
+- Python – Core logic, string problems, and coding patterns
+- PySpark – Real-world data transformation scenarios
+- AWS – Glue, Lambda, S3, and more in context of DE
+- System Design – Design for scale, ingestion, and batch/streaming
+- Data Modeling – Warehousing patterns, dimension modeling
+- Projects – End-to-end projects to showcase real experience
+- Behavioral – Role-fit, scenario-based and culture questions
 
 Each section is filled with real questions from interview prep, solved with clarity.
 
 ⸻
 
 ## 🛠️ Tech Stack
-	•	MkDocs – Static site generator
-	•	Material for MkDocs – Theme and UI
-	•	Markdown-based content (easy to extend and contribute)
+
+- MkDocs – Static site generator
+- Material for MkDocs – Theme and UI
+- Markdown-based content (easy to extend and contribute)
 
 ⸻
 
@@ -63,9 +66,10 @@ mkdocs serve
 
 This is a personal project, but open to community suggestions, ideas, and contributions.
 To propose:
-	•	Submit an Issue
-	•	Fork the repo and open a PR
-	•	Suggest new questions or corrections
+
+- Submit an Issue
+- Fork the repo and open a PR
+- Suggest new questions or corrections
 
 ⸻
 
