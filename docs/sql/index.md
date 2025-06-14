@@ -4,9 +4,25 @@ description: A collection of commonly asked SQL interview questions with explana
 keywords: SQL, interview questions, joins, subquery, group by, having, duplicates
 ---
 
+## 📚 Table of Contents
+
+1. [What is a LEFT ANTI JOIN?](#q1-what-is-a-left-anti-join-how-is-it-different-from-left-join)
+2. [Find Second Highest Salary](#q2-write-a-sql-query-to-find-the-second-highest-salary-from-an-employees-table)
+3. [WHERE vs HAVING](#q3-what-is-the-difference-between-where-and-having-in-sql)
+4. [Find Duplicate Emails](#q4-write-a-query-to-find-duplicate-records-based-on-email-in-a-users-table)
+5. [Latest Record Per Group](#q5-how-do-you-retrieve-the-latest-top-1-record-per-group-in-sql)
+6. [Running Total of Sales](#q6-write-a-query-to-calculate-the-running-cumulative-total-of-sales-per-day)
+7. [Employees Earning More Than Manager](#q7-write-a-sql-query-to-find-employees-who-earn-more-than-their-manager)
+8. [Employees Hired Last 6 Months](#q8-write-a-sql-query-to-find-employees-hired-in-the-last-6-months)
+9. [Running Salary Total](#q9-write-a-sql-query-to-calculate-the-running-total-of-employee-salaries)
+10. [Pivot Monthly Sales](#q10-write-a-sql-query-to-pivot-monthly-sales-data-by-product)
+
 > ℹ️ All queries use ANSI SQL unless a specific dialect (e.g., PostgreSQL, MySQL, SQL Server) is mentioned.
 
 # SQL Interview Questions
+
+
+**🟢 Difficulty:** Easy  **📂 Topic:** Joins
 
 ## Q1. What is a LEFT ANTI JOIN? How is it different from LEFT JOIN?
 
@@ -18,18 +34,24 @@ This is different from a LEFT JOIN, which returns **all rows** from the left tab
 
 Assume we have the following `orders` and `customers` tables:
 
+
 **orders**
-| id | customer_id | order_date  |
-|---:|------------:|------------:|
-|  1 |         101 | 2023-01-10  |
-|  2 |         102 | 2023-01-11  |
-|  3 |        NULL | 2023-01-12  |
+
+| id | customer_id | order_date |
+|----|-------------|------------|
+| 1  | 101         | 2023-01-10 |
+| 2  | 102         | 2023-01-11 |
+| 3  | NULL        | 2023-01-12 |
+
+
 
 **customers**
-| id  | name       |
-|----:|------------|
-| 101 | Alice      |
-| 102 | Bob        |
+
+| id  | name  |
+|-----|-------|
+| 101 | Alice |
+| 102 | Bob   |
+
 
 ### 🔍 Example:
 
@@ -47,9 +69,11 @@ LEFT ANTI JOIN effectively filters out all rows from the left table that have ma
 
 ### 🧾 Expected Output:
 
-| id | customer_id | order_date  |
-|---:|------------:|------------:|
-|  3 |        NULL | 2023-01-12  |
+
+| id | customer_id | order_date |
+|----|-------------|------------|
+| 3  | NULL        | 2023-01-12 |
+
 
 ---
 
@@ -59,19 +83,25 @@ LEFT ANTI JOIN effectively filters out all rows from the left table that have ma
 
 ---
 
+
+**🟡 Difficulty:** Medium  **📂 Topic:** Subqueries
+
 ## Q2. Write a SQL query to find the second highest salary from an `employees` table.
 
 ### 📋 Table Structure & Sample Data
 
+
 Assume we have the following `employees` table:
 
 **employees**
-| id | name    | salary | department | hire_date  | manager_id |
-|---:|---------|-------:|------------|------------|-----------:|
-|  1 | Alice   |  70000 | HR         | 2021-05-01 |       NULL |
-|  2 | Bob     |  90000 | IT         | 2020-03-15 |          1 |
-|  3 | Carol   |  80000 | IT         | 2022-01-10 |          2 |
-|  4 | Dave    |  60000 | HR         | 2023-04-20 |          1 |
+
+| id | name  | salary | department | hire_date  | manager_id |
+|----|-------|--------|------------|------------|------------|
+| 1  | Alice | 70000  | HR         | 2021-05-01 | NULL       |
+| 2  | Bob   | 90000  | IT         | 2020-03-15 | 1          |
+| 3  | Carol | 80000  | IT         | 2022-01-10 | 2          |
+| 4  | Dave  | 60000  | HR         | 2023-04-20 | 1          |
+
 
 ### 🔍 Example:
 
@@ -90,9 +120,11 @@ This query demonstrates how to find the second highest value using a subquery th
 
 ### 🧾 Expected Output:
 
+
 | second_highest |
-|--------------:|
-|          80000 |
+|----------------|
+| 80000          |
+
 
 ---
 
@@ -102,6 +134,9 @@ This query demonstrates how to find the second highest value using a subquery th
 
 ---
 
+
+**🟢 Difficulty:** Easy  **📂 Topic:** Aggregation
+
 ## Q3. What is the difference between `WHERE` and `HAVING` in SQL?
 
 - `WHERE` filters rows **before** aggregation.
@@ -109,15 +144,18 @@ This query demonstrates how to find the second highest value using a subquery th
 
 ### 📋 Table Structure & Sample Data
 
+
 Assume we have the following `employees` table:
 
 **employees**
+
 | id | name    | salary | department | hire_date  |
-|---:|---------|-------:|------------|------------|
-|  1 | Alice   |  50000 | HR         | 2022-02-15 |
-|  2 | Bob     |  70000 | IT         | 2021-06-12 |
-|  3 | Charlie |  60000 | IT         | 2023-01-20 |
-|  4 | Diana   |  55000 | Finance    | 2020-11-05 |
+|----|---------|--------|------------|------------|
+| 1  | Alice   | 50000  | HR         | 2022-02-15 |
+| 2  | Bob     | 70000  | IT         | 2021-06-12 |
+| 3  | Charlie | 60000  | IT         | 2023-01-20 |
+| 4  | Diana   | 55000  | Finance    | 2020-11-05 |
+
 
 ### 🔍 Example:
 
@@ -135,9 +173,11 @@ Use WHERE to filter rows before aggregation, and HAVING to filter groups after a
 
 ### 🧾 Expected Output:
 
+
 | department | emp_count |
-|------------|----------:|
+|------------|-----------|
 | (no rows)  |           |
+
 
 ---
 
@@ -147,21 +187,27 @@ Use WHERE to filter rows before aggregation, and HAVING to filter groups after a
 
 ---
 
+
+**🟢 Difficulty:** Easy  **📂 Topic:** Duplicates
+
 ## Q4. Write a query to find duplicate records based on `email` in a `users` table.
 
 ### 📋 Table Structure & Sample Data
 
+
 Assume we have the following `users` table:
 
 **users**
-| id | name     | email            |
-|---:|----------|------------------|
-|  1 | Alice    | alice@email.com  |
-|  2 | Bob      | bob@email.com    |
-|  3 | Carol    | alice@email.com  |
-|  4 | Dave     | dave@email.com   |
-|  5 | Eve      | eve@email.com    |
-|  6 | Frank    | bob@email.com    |
+
+| id | name  | email           |
+|----|-------|-----------------|
+| 1  | Alice | alice@email.com |
+| 2  | Bob   | bob@email.com   |
+| 3  | Carol | alice@email.com |
+| 4  | Dave  | dave@email.com  |
+| 5  | Eve   | eve@email.com   |
+| 6  | Frank | bob@email.com   |
+
 
 ### 🔍 Example:
 
@@ -179,10 +225,12 @@ Grouping by email and filtering with HAVING identifies duplicate email entries i
 
 ### 🧾 Expected Output:
 
+
 | email           | count |
-|-----------------|------:|
-| alice@email.com |     2 |
-| bob@email.com   |     2 |
+|-----------------|-------|
+| alice@email.com | 2     |
+| bob@email.com   | 2     |
+
 
 ---
 
@@ -192,22 +240,28 @@ Grouping by email and filtering with HAVING identifies duplicate email entries i
 
 ---
 
+
+**🟡 Difficulty:** Medium  **📂 Topic:** Grouping and Filtering
+
 ## Q5. How do you retrieve the latest (Top 1) record per group in SQL?
 
 This is useful when you want to get the most recent order per customer, highest sale per region, etc.
 
 ### 📋 Table Structure & Sample Data
 
+
 Assume we have the following `orders` table:
 
 **orders**
-| id | customer_id | order_date  | amount |
-|---:|------------:|------------:|-------:|
-|  1 |         101 | 2023-01-10  |    250 |
-|  2 |         102 | 2023-01-11  |    100 |
-|  3 |         101 | 2023-02-12  |    400 |
-|  4 |         103 | 2023-02-15  |    150 |
-|  5 |         102 | 2023-03-01  |    200 |
+
+| id | customer_id | order_date | amount |
+|----|-------------|------------|--------|
+| 1  | 101         | 2023-01-10 | 250    |
+| 2  | 102         | 2023-01-11 | 100    |
+| 3  | 101         | 2023-02-12 | 400    |
+| 4  | 103         | 2023-02-15 | 150    |
+| 5  | 102         | 2023-03-01 | 200    |
+
 
 ### 🔍 Example: Get the most recent order per customer from an `orders` table
 
@@ -230,11 +284,13 @@ A self-join on max date per group efficiently retrieves the latest record per gr
 
 ### 🧾 Expected Output:
 
-| id | customer_id | order_date  | amount |
-|---:|------------:|------------:|-------:|
-|  3 |         101 | 2023-02-12  |    400 |
-|  5 |         102 | 2023-03-01  |    200 |
-|  4 |         103 | 2023-02-15  |    150 |
+
+| id | customer_id | order_date | amount |
+|----|-------------|------------|--------|
+| 3  | 101         | 2023-02-12 | 400    |
+| 5  | 102         | 2023-03-01 | 200    |
+| 4  | 103         | 2023-02-15 | 150    |
+
 
 ---
 
@@ -263,22 +319,28 @@ Using ROW_NUMBER() allows retrieval of the top record per group without self-joi
 
 ---
 
+
+**🟠 Difficulty:** Medium-High  **📂 Topic:** Window Functions
+
 ## Q6. Write a query to calculate the running (cumulative) total of sales per day.
 
 This is commonly asked to test your understanding of **window functions** and date-wise aggregations.
 
 ### 📋 Table Structure & Sample Data
 
+
 Assume we have the following `sales` table:
 
 **sales**
-| id | sale_date   | amount | region   |
-|---:|------------:|-------:|---------|
-|  1 | 2023-01-01  |    100 | North   |
-|  2 | 2023-01-02  |    200 | North   |
-|  3 | 2023-01-01  |    150 | South   |
-|  4 | 2023-01-03  |    250 | North   |
-|  5 | 2023-01-02  |    120 | South   |
+
+| id | sale_date  | amount | region |
+|----|------------|--------|--------|
+| 1  | 2023-01-01 | 100    | North  |
+| 2  | 2023-01-02 | 200    | North  |
+| 3  | 2023-01-01 | 150    | South  |
+| 4  | 2023-01-03 | 250    | North  |
+| 5  | 2023-01-02 | 120    | South  |
+
 
 ### 🔍 Example: From a `sales` table with columns `sale_date` and `amount`
 
@@ -299,13 +361,15 @@ Window functions enable cumulative calculations over ordered data without collap
 
 ### 🧾 Expected Output:
 
+
 | sale_date  | amount | running_total |
-|-----------:|-------:|--------------:|
-| 2023-01-01 |    100 |           100 |
-| 2023-01-01 |    150 |           250 |
-| 2023-01-02 |    200 |           450 |
-| 2023-01-02 |    120 |           570 |
-| 2023-01-03 |    250 |           820 |
+|------------|--------|---------------|
+| 2023-01-01 | 100    | 100           |
+| 2023-01-01 | 150    | 250           |
+| 2023-01-02 | 200    | 450           |
+| 2023-01-02 | 120    | 570           |
+| 2023-01-03 | 250    | 820           |
+
 
 ---
 
@@ -333,6 +397,9 @@ Partitioning window functions allows separate running totals within categories.
 
 ---
 
+
+**🟡 Difficulty:** Medium  **📂 Topic:** Self Joins
+
 ## Q7. Write a SQL query to find employees who earn more than their manager.
 
 This question tests understanding of **self-joins** and hierarchical data.
@@ -345,16 +412,19 @@ Assume the `employees` table has the following columns:
 
 ### 📋 Table Structure & Sample Data
 
+
 Assume we have the following `employees` table:
 
 **employees**
-| id | name    | salary | manager_id |
-|---:|---------|-------:|-----------:|
-|  1 | Alice   |  90000 |       NULL |
-|  2 | Bob     |  85000 |          1 |
-|  3 | Carol   |  95000 |          2 |
-|  4 | Dave    |  80000 |          1 |
-|  5 | Eve     |  99000 |          2 |
+
+| id | name  | salary | manager_id |
+|----|-------|--------|------------|
+| 1  | Alice | 90000  | NULL       |
+| 2  | Bob   | 85000  | 1          |
+| 3  | Carol | 95000  | 2          |
+| 4  | Dave  | 80000  | 1          |
+| 5  | Eve   | 99000  | 2          |
+
 
 ### 🔍 Example:
 
@@ -378,10 +448,12 @@ Self-joins allow comparing hierarchical relationships such as employee and manag
 
 ### 🧾 Expected Output:
 
+
 | employee_name | employee_salary | manager_name | manager_salary |
-|--------------:|----------------:|-------------:|---------------:|
-| Carol         |           95000 | Bob          |          85000 |
-| Eve           |           99000 | Bob          |          85000 |
+|---------------|----------------|--------------|---------------|
+| Carol         | 95000          | Bob          | 85000         |
+| Eve           | 99000          | Bob          | 85000         |
+
 
 ---
 
@@ -408,6 +480,9 @@ Selecting IDs can simplify output when only identifiers are needed for further q
 
 ---
 
+
+**🟢 Difficulty:** Easy  **📂 Topic:** Date Filtering
+
 ## Q8. Write a SQL query to find employees hired in the last 6 months.
 
 This question tests your ability to work with **date functions** and **interval calculations**.
@@ -417,16 +492,19 @@ Assume the `employees` table has a column:
 
 ### 📋 Table Structure & Sample Data
 
+
 Assume we have the following `employees` table:
 
 **employees**
-| id | name    | hire_date  | department |
-|---:|---------|------------|------------|
-|  1 | Alice   | 2023-12-01 | HR         |
-|  2 | Bob     | 2023-04-15 | IT         |
-|  3 | Carol   | 2022-10-10 | IT         |
-|  4 | Dave    | 2023-09-05 | Finance    |
-|  5 | Eve     | 2022-07-20 | HR         |
+
+| id | name  | hire_date  | department |
+|----|-------|------------|------------|
+| 1  | Alice | 2023-12-01 | HR         |
+| 2  | Bob   | 2023-04-15 | IT         |
+| 3  | Carol | 2022-10-10 | IT         |
+| 4  | Dave  | 2023-09-05 | Finance    |
+| 5  | Eve   | 2022-07-20 | HR         |
+
 
 ### 🔍 Example:
 
@@ -445,10 +523,12 @@ Date arithmetic with INTERVAL helps filter recent records relative to the curren
 
 ### 🧾 Expected Output:
 
+
 | id | name  | hire_date  | department |
-|---:|-------|------------|------------|
-|  1 | Alice | 2023-12-01 | HR         |
-|  4 | Dave  | 2023-09-05 | Finance    |
+|----|-------|------------|------------|
+| 1  | Alice | 2023-12-01 | HR         |
+| 4  | Dave  | 2023-09-05 | Finance    |
+
 
 ---
 
@@ -473,18 +553,23 @@ MySQL uses DATE_SUB and CURDATE() for date interval calculations similar to Post
 
 ---
 
+
+**🟠 Difficulty:** Medium-High  **📂 Topic:** Running Totals
+
 ## Q9. Write a SQL query to calculate the running total of employee salaries.
 
 This question checks your understanding of **window functions** and cumulative aggregations.
 
+
 Assume the `employees` table has the following structure:
 
-| id | name      | department | salary | hire_date  |
-|---:|-----------|------------|-------:|------------|
-|  1 | Alice     | HR         |  50000 | 2022-02-15 |
-|  2 | Bob       | IT         |  70000 | 2021-06-12 |
-|  3 | Charlie   | IT         |  60000 | 2023-01-20 |
-|  4 | Diana     | Finance    |  55000 | 2020-11-05 |
+| id | name    | department | salary | hire_date  |
+|----|---------|------------|--------|------------|
+| 1  | Alice   | HR         | 50000  | 2022-02-15 |
+| 2  | Bob     | IT         | 70000  | 2021-06-12 |
+| 3  | Charlie | IT         | 60000  | 2023-01-20 |
+| 4  | Diana   | Finance    | 55000  | 2020-11-05 |
+
 
 ### 🔍 Example: Calculate cumulative salary ordered by hire date
 
@@ -505,12 +590,14 @@ Window functions can calculate cumulative totals ordered by a specific column, l
 
 ### 🧾 Expected Output:
 
+
 | id | name    | salary | hire_date  | running_salary_total |
-|---:|---------|-------:|------------|---------------------:|
-|  4 | Diana   |  55000 | 2020-11-05 |               55000  |
-|  2 | Bob     |  70000 | 2021-06-12 |              125000  |
-|  1 | Alice   |  50000 | 2022-02-15 |              175000  |
-|  3 | Charlie |  60000 | 2023-01-20 |              235000  |
+|----|---------|--------|------------|---------------------|
+| 4  | Diana   | 55000  | 2020-11-05 | 55000               |
+| 2  | Bob     | 70000  | 2021-06-12 | 125000              |
+| 1  | Alice   | 50000  | 2022-02-15 | 175000              |
+| 3  | Charlie | 60000  | 2023-01-20 | 235000              |
+
 
 ---
 
@@ -540,23 +627,29 @@ Partitioning by department calculates running totals separately for each departm
 
 ---
 
+
+**🟡 Difficulty:** Medium  **📂 Topic:** Pivoting
+
 ## Q10. Write a SQL query to pivot monthly sales data by product.
 
 This question tests your understanding of **pivoting**, **aggregation**, and conditional expressions.
 
 ### 📋 Table Structure & Sample Data
 
+
 Assume we have the following `sales` table:
 
 **sales**
-| id | product   | sale_month | amount |
-|---:|-----------|------------|-------:|
-|  1 | Laptop    | Jan        |   1000 |
-|  2 | Laptop    | Feb        |   1500 |
-|  3 | Monitor   | Jan        |    700 |
-|  4 | Monitor   | Feb        |    900 |
-|  5 | Keyboard  | Jan        |    300 |
-|  6 | Keyboard  | Feb        |    400 |
+
+| id | product  | sale_month | amount |
+|----|----------|------------|--------|
+| 1  | Laptop   | Jan        | 1000   |
+| 2  | Laptop   | Feb        | 1500   |
+| 3  | Monitor  | Jan        | 700    |
+| 4  | Monitor  | Feb        | 900    |
+| 5  | Keyboard | Jan        | 300    |
+| 6  | Keyboard | Feb        | 400    |
+
 
 ### 🔍 Example:
 
@@ -576,11 +669,13 @@ Conditional aggregation enables pivoting data without special pivot functions.
 
 ### 🧾 Expected Output:
 
-| product  |  Jan |  Feb |
-|----------|-----:|-----:|
+
+| product  | Jan  | Feb  |
+|----------|------|------|
 | Laptop   | 1000 | 1500 |
-| Monitor  |  700 |  900 |
-| Keyboard |  300 |  400 |
+| Monitor  | 700  | 900  |
+| Keyboard | 300  | 400  |
+
 
 ---
 
