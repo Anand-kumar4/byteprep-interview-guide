@@ -32,6 +32,7 @@ markdown_extensions:
   - codehilite
   - toc:
       permalink: true
+      toc_depth: 2
   - footnotes
   - tables
   - pymdownx.superfences
