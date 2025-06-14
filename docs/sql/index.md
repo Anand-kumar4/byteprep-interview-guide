@@ -4,18 +4,6 @@ description: A collection of commonly asked SQL interview questions with explana
 keywords: SQL, interview questions, joins, subquery, group by, having, duplicates
 ---
 
-## 📚 Table of Contents
-
-1. [What is a LEFT ANTI JOIN?](#q1-what-is-a-left-anti-join-how-is-it-different-from-left-join)
-2. [Find Second Highest Salary](#q2-write-a-sql-query-to-find-the-second-highest-salary-from-an-employees-table)
-3. [WHERE vs HAVING](#q3-what-is-the-difference-between-where-and-having-in-sql)
-4. [Find Duplicate Emails](#q4-write-a-query-to-find-duplicate-records-based-on-email-in-a-users-table)
-5. [Latest Record Per Group](#q5-how-do-you-retrieve-the-latest-top-1-record-per-group-in-sql)
-6. [Running Total of Sales](#q6-write-a-query-to-calculate-the-running-cumulative-total-of-sales-per-day)
-7. [Employees Earning More Than Manager](#q7-write-a-sql-query-to-find-employees-who-earn-more-than-their-manager)
-8. [Employees Hired Last 6 Months](#q8-write-a-sql-query-to-find-employees-hired-in-the-last-6-months)
-9. [Running Salary Total](#q9-write-a-sql-query-to-calculate-the-running-total-of-employee-salaries)
-10. [Pivot Monthly Sales](#q10-write-a-sql-query-to-pivot-monthly-sales-data-by-product)
 
 > ℹ️ All queries use ANSI SQL unless a specific dialect (e.g., PostgreSQL, MySQL, SQL Server) is mentioned.
 
