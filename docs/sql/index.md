@@ -32,7 +32,7 @@ This query helps identify orphaned records — such as orders that are not linke
 ```sql
 SELECT MAX(salary) AS second_highest
 FROM employees
-WHERE salary &lt; (
+WHERE salary < (
   SELECT MAX(salary) FROM employees
 );
 ```
@@ -52,7 +52,7 @@ This uses a subquery to exclude the highest salary and returns the next highest.
 SELECT department, COUNT(*) AS emp_count
 FROM employees
 GROUP BY department
-HAVING COUNT(*) &gt; 5;
+HAVING COUNT(*) > 5;
 ```
 
 This query filters departments with more than 5 employees — `HAVING` is used after the `GROUP BY`.
@@ -67,7 +67,7 @@ This query filters departments with more than 5 employees — `HAVING` is used a
 SELECT email, COUNT(*) AS count
 FROM users
 GROUP BY email
-HAVING COUNT(*) &gt; 1;
+HAVING COUNT(*) > 1;
 ```
 
 This helps identify duplicates that can be cleaned or deduplicated.

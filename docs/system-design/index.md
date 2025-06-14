@@ -1,3 +1,9 @@
+---
+title: System Design Questions
+description: Core system design questions for data engineers covering real-time analytics, lakehouse architecture, and stream vs batch processing.
+keywords: system design, data engineering, real-time analytics, lakehouse, stream processing, batch processing, architecture
+---
+
 ## 1. How do you design a scalable real-time analytics platform?
 
 A real-time analytics platform typically includes:
