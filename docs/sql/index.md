@@ -63,9 +63,8 @@ LEFT ANTI JOIN effectively filters out all rows from the left table that have ma
 | 3  | NULL        | 2023-01-12 |
 
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #joins #anti-join
 
@@ -114,9 +113,8 @@ This query demonstrates how to find the second highest value using a subquery th
 | 80000          |
 
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #subquery #ranking
 
@@ -167,9 +165,8 @@ Use WHERE to filter rows before aggregation, and HAVING to filter groups after a
 | (no rows)  |           |
 
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #aggregation #filtering
 
@@ -220,9 +217,8 @@ Grouping by email and filtering with HAVING identifies duplicate email entries i
 | bob@email.com   | 2     |
 
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #duplicates #group-by
 
@@ -299,9 +295,8 @@ This approach assigns a row number to each order within a customer partition and
 ### 💡 Key Insight:
 Using ROW_NUMBER() allows retrieval of the top record per group without self-joins.
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #window-functions #latest-record
 
@@ -377,9 +372,8 @@ This gives a running total **per region** per day.
 ### 💡 Key Insight:
 Partitioning window functions allows separate running totals within categories.
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #window-functions #cumulative-sum
 
@@ -460,9 +454,8 @@ This version returns just the IDs for use in further processing.
 ### 💡 Key Insight:
 Selecting IDs can simplify output when only identifiers are needed for further queries.
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #self-join #hierarchical-data
 
@@ -533,9 +526,8 @@ Use the appropriate syntax based on your SQL dialect.
 ### 💡 Key Insight:
 MySQL uses DATE_SUB and CURDATE() for date interval calculations similar to PostgreSQL's INTERVAL.
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #date-functions #interval
 
@@ -607,9 +599,8 @@ This version gives the cumulative salary **per department**, ordered by hiring d
 ### 💡 Key Insight:
 Partitioning by department calculates running totals separately for each department.
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #window-functions #cumulative-sum
 
@@ -686,8 +677,7 @@ This approach uses built-in pivot functionality available in some SQL dialects.
 ### 💡 Key Insight:
 Pivot syntax simplifies transforming row data into columns but is dialect-specific.
 
----
 
-← Previous Question | Next Question →
+<!-- ← Previous Question | Next Question → -->
 
 **Tags**: #pivot #aggregation #conditional-aggregation

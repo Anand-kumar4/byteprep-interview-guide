@@ -1,19 +1,23 @@
-
 ---
 title: Python Interview Questions
 description: A curated list of Python coding questions including medium-level problems and string manipulation challenges, commonly asked in data engineering and software interviews.
 keywords: Python, interview questions, coding problems, string algorithms, LeetCode, Python strings
 ---
 
+This section presents hand-picked Python questions and solutions that are commonly asked in data engineering and software interviews. The focus is on practical coding patterns and medium-difficulty challenges.
 
 # Python Interview Questions
 
-## Medium Complexity Problems
+## 🧠 Medium Complexity Problems
 
-### 1. Longest Substring Without Repeating Characters
+### Q1. Longest Substring Without Repeating Characters
 **Problem:** Given a string, find the length of the longest substring without repeating characters.  
 **Approach:** Use a sliding window and a hash set to keep track of characters in the current window.  
+💡 **Key Insight:** Use a moving window to avoid repeating characters while tracking maximum length.  
 **Code:**
+<details>
+<summary>Click to view solution</summary>
+
 ```python
 def length_of_longest_substring(s: str) -> int:
     char_set = set()
@@ -29,10 +33,20 @@ def length_of_longest_substring(s: str) -> int:
     return max_len
 ```
 
-### 2. 3Sum
+</details>
+
+**Example:**  
+Input: `"abcabcbb"`  
+Output: `3`
+
+### Q2. 3Sum
 **Problem:** Given an array `nums` of `n` integers, find all unique triplets in the array which gives the sum of zero.  
 **Approach:** Sort the array and use a two-pointer approach inside a loop.  
+💡 **Key Insight:** Sort the array and avoid duplicates using two pointers from both ends.  
 **Code:**
+<details>
+<summary>Click to view solution</summary>
+
 ```python
 def three_sum(nums: list[int]) -> list[list[int]]:
     nums.sort()
@@ -58,20 +72,48 @@ def three_sum(nums: list[int]) -> list[list[int]]:
     return res
 ```
 
-## String-Related Questions
+</details>
 
-### 1. Reverse Words in a String
+**Example:**  
+Input: `[-1,0,1,2,-1,-4]`  
+Output: `[[-1,-1,2],[-1,0,1]]`
+
+## 🔤 String-Related Questions
+
+### Q3. Reverse Words in a String
 **Problem:** Given an input string `s`, reverse the order of the words.  
+💡 **Key Insight:** Split, reverse, and rejoin with single spaces.  
 **Code:**
+<details>
+<summary>Click to view solution</summary>
+
 ```python
 def reverse_words(s: str) -> str:
     return " ".join(reversed(s.strip().split()))
 ```
 
-### 2. Valid Anagram
+</details>
+
+**Example:**  
+Input: `"  hello world  "`  
+Output: `"world hello"`
+
+### Q4. Valid Anagram
 **Problem:** Given two strings `s` and `t`, return true if `t` is an anagram of `s`, and false otherwise.  
+💡 **Key Insight:** Sorting both strings and comparing ensures character counts match.  
 **Code:**
+<details>
+<summary>Click to view solution</summary>
+
 ```python
 def is_anagram(s: str, t: str) -> bool:
     return sorted(s) == sorted(t)
 ```
+
+</details>
+
+**Example:**  
+Input: `s = "anagram", t = "nagaram"`  
+Output: `True`
+
+[⬅️ Back to Python Overview](../index.md)

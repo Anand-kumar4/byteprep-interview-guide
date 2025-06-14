@@ -19,7 +19,12 @@ theme:
 nav:
   - Home: index.md
   - SQL: sql/index.md
-  - Python: python/index.md
+  - Python:
+      - Overview: python/index.md
+      - Core Concepts: python/core-concepts.md
+      - Theory Questions: python/theory.md
+      - Practical Coding: python/practical.md
+      - DSA Concepts: python/dsa.md
   - PySpark: pyspark/index.md
   - AWS: aws/index.md
   - Data Modeling: data-modeling/index.md
@@ -47,6 +52,7 @@ plugins:
   - minify:
       minify_html: true
   - meta-descriptions
+  - awesome-pages
 
 extra_javascript:
   - https://www.googletagmanager.com/gtag/js?id=G-VK6H53CHXQ
